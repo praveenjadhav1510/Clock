@@ -14,7 +14,7 @@ h1 {
 				inset -5px -5px 15px #FFFFFF30;
 }
 .clock div .line {
-	width: 25px;
+	width: 30px;
 	height: 10px;
 	transition: 0.5s;
 	position: relative;
