@@ -1,0 +1,89 @@
+body {
+	display: grid;
+	place-items: center;
+   	background: #4d5863;
+	font-family: monospace;
+	transition: all .5s;
+}
+h1 {
+	color: white;
+	transition: all .5s;
+}
+.clock {
+	margin-top: 50px;
+	width: 250px;
+	height: 250px;
+	display: grid;
+	place-items: center;
+	background: black;
+	border-radius: 200px;
+	border: 7px solid #4dffff1a;
+	transform: rotate(-90deg);
+	transition: all .5s;
+	box-shadow: 10px 10px 15px #ffffff30,
+				-10px -10px 15px #00000070,
+				inset 5px 5px 15px #FFFFFF30,
+				inset -5px -5px 15px #FFFFFF30;
+}
+.clock span {
+	transform: rotate(90deg);
+	position: relative;
+	right: -50px;
+}
+.clock div {
+	width: 250px;
+	height: 250px;
+	background: transparent;
+	position: absolute;
+	display: grid;
+	place-items: center;
+	transition: all .4s;
+}
+.clock div .line {
+	width: 30px;
+	height: 10px;
+	color: transparent;
+	transition: .5s;
+	border-radius: 15px;
+	background: red;
+	position: relative;
+	left: 35%;
+	font-size: 7px;
+	line-height: 5px;
+}
+.main:hover > .clock div .line {
+	color: black;
+	text-shadow: white 2px 2px 5px;
+}
+.clock div .center {
+	background: red;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+}
+.second-1 {
+	animation: 1s run infinite linear;
+	animation-delay: .5s;
+}
+@keyframes run {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.clock div .h {
+	background: blue;
+}
+.clock div .m {
+	background: #4fff4f;
+}
+.clock div .s {
+	background: cyan;
+}
+@media only screen and (min-width: 750px) {
+	.main {
+		scale: 1.2;
+	}
+}

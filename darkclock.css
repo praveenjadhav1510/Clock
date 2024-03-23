@@ -1,0 +1,21 @@
+body {
+	background: #4d5863;
+}
+h1 {
+	color: white;
+}
+.clock {
+	color: white;
+	background: black;
+	border: 7px solid #4dffff1a;
+	box-shadow: 10px 10px 15px #ffffff30,
+				-10px -10px 15px #00000070,
+				inset 5px 5px 15px #FFFFFF30,
+				inset -5px -5px 15px #FFFFFF30;
+}
+.clock div .line {
+	width: 25px;
+	height: 10px;
+	transition: 0.5s;
+	position: relative;
+	left: 35%;
