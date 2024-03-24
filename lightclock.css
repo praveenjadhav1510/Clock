@@ -13,10 +13,6 @@ h1 {
 				inset 5px 5px 15px #00000030,
 				inset -5px -5px 15px #00000030;
 }
-.clock div .line {
-	width: 100px;
-	height: 7px;
-	transition: 0.5s;
-	position: absolute;
-	left: 50%;
+.main:hover > .clock .second-1 .s1 ,.pos div {
+	background: blue;
 }

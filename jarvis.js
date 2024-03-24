@@ -2,7 +2,7 @@ var ct = document.getElementById('ct');
 var hourbox = document.getElementById('hour');
 var minutebox = document.getElementById('minute');
 var secondbox = document.getElementById('second');
-var theam = 'dark';
+var theme = 'dark';
 function updatetime() {
 	const time = new Date();
 	var h = time.getHours();
@@ -13,8 +13,8 @@ function updatetime() {
 	var minutes = Math.ceil((m/60)*360);
 	var second = Math.ceil((s/60)*360);
 	ct.innerText = h+":"+m+":"+s;
-	console.log("time current values: "+h+":"+m+":"+s);
-	console.log("time 360deg  values: "+hours+":"+minutes+":"+second);
+	//console.log("time current values: "+h+":"+m+":"+s);
+	//console.log("time 360deg  values: "+hours+":"+minutes+":"+second);
 	hourbox.style.transform = "rotate("+hours+"deg)";
 	minutebox.style.transform = "rotate("+minutes+"deg)";
 	secondbox.style.transform = "rotate("+second+"deg)";
@@ -22,25 +22,16 @@ function updatetime() {
 setInterval(updatetime,500);
 
 function changetheam() {
-	if(theam == 'dark'){
-		theam = 'lite';
-		light();
+	if(theme == 'dark'){
+		theme = 'lite';
+		addlink('lightclock.css');
 	} else {
-		theam = 'dark';
-		dark();
+		theme = 'dark';
+		addlink('darkclock.css');
 	}
 }
-function dark(){
-	var linkElement = document.createElement("link");
-	linkElement.rel = "stylesheet";
-	linkElement.type = "text/css";
-	linkElement.href = "darkclock.css";
-	document.head.appendChild(linkElement);
-}
-function light(){
-	var linkElement = document.createElement("link");
-	linkElement.rel = "stylesheet";
-	linkElement.type = "text/css";
-	linkElement.href = "lightclock.css";
+function addlink(css){
+	var linkElement = document.getElementById('styls');
+	linkElement.href = css;
 	document.head.appendChild(linkElement);
 }
