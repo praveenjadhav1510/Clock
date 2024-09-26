@@ -53,11 +53,8 @@ To run the clock locally:
 - `/style.css`: CSS file that contains all styling for the clock.
 - `/script.js`: JavaScript file that controls the clock's functionality.
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
+### Preview 1
+![Link Cards Preview](images/p1.png)
 
 #### duble tap to change Theame
 ### URL https://praveenjadhav1510.github.io/clock
